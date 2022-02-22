@@ -1,0 +1,261 @@
+/* style.css */
+:root {
+    --main-color : #0028B5;
+    --sub-color1 : #FF5C83;
+    --sub-color2 : #E26FFF;
+    --bg-color   : #74D0EE;
+ }
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    text-align: center;
+}
+
+section h2 {
+    font-family: 'Yeon Sung', cursive;
+    color: var(--main-color);
+    font-size: 28px;
+    line-height: 40px;
+    margin-bottom: 20px;
+}
+
+header {
+    background-color: #74D0EE;
+    background-image: url(./img/HEADERbg.jpg);
+    /* 높이값 810px(전체) : 224px(헤더) = 27.65% (viewport height) 
+    https://www.w3schools.com/css/css_rwd_viewport.asp
+    https://developer.mozilla.org/ko/docs/Web/CSS/@viewport
+    */
+    height: 28vh;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 28px;
+    font-family: 'Yeon Sung', cursive;
+    color: var(--main-color) ;
+}
+
+header h1 > span {
+    font-size: 18px;
+}
+
+header .logo {
+    width: 120px;
+}    
+
+#title {
+    background: #ccc;
+    height: 100vh;
+}
+
+#title .title-photo {
+    height: 50vh;
+    /* outline: 2px solid #000; */
+}
+
+.title-photo > img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+#title .title-footer {
+    background: #fff;
+    height: 22vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#title .title-footer .date {
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+#title .title-footer .address {
+    font-size: 16px;
+}
+
+
+section .bar {
+    height: 40px;
+    width: 2px;
+    background: var(--main-color);
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+/* 초대글 영역 */
+
+#invitation {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background: var(--bg-color);
+    padding-left: 48px;
+    padding-right: 48px;
+}
+
+#invitation p {
+    margin-bottom: 1em;
+}
+
+.send-msg-box {
+    /* background: #ccc; */
+    display: flex;
+    margin-top: 55px;
+}
+
+.send-btn {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000;
+}
+
+.send-btn i {
+    margin-right: 10px;
+}
+
+/* 갤러리 */
+
+#gallery  {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+#gallery > figure {
+    background: var(--sub-color2);
+    /* outline: 2px solid red; */
+    padding: 30px 15px;
+
+}
+
+#gallery > figure > .main-photo > img {
+    width: 100%;
+    height: 287px;
+    object-fit: cover;
+    display: block;
+}
+
+figure > .img-list {
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+figure > .img-list > li {
+    width: calc((100% - 30px) / 4);
+    height: 60px;
+}
+
+figure > .img-list > li > a > img {
+    width: 100%;
+    height: 60px;
+    object-fit: cover;
+}
+
+/* 오시는 길 */
+
+#location {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: var(--bg-color);
+}
+
+#map {
+    margin-bottom: 20px;
+}
+
+/* 축하해주기 */
+
+#congrat {
+    padding-top: 50px;
+    /* padding-bottom: 50px; */
+    background-color: #fff;
+}
+
+.contact-box-wrap > .contact-box:first-child {
+    background: rgba(235, 35, 147, 0.9);
+}
+
+.contact-box-wrap > .contact-box:last-child {
+    background: #4fabd8;
+}
+
+.contact-box > span {
+    color: #fff;
+}
+
+.contact-box-wrap {
+    display: flex;    
+    margin-bottom: 53px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.contact-box {
+    flex: 1;
+    padding-top: 23px;
+    padding-bottom: 23px;
+    border-radius: 15%;
+}
+
+.icon-box > a:first-child {
+    margin-right: 20px;
+}
+
+.sns-group {
+    background: var(--bg-color);
+    display: flex;
+    padding: 30px 40px;
+    justify-content: space-between;
+}
+
+.sns-group > a {
+    color: #fff;
+}
+
+/* 준비화면 */
+.splash-screen.on {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 999;
+    background: var(--bg-color);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.splash-screen {
+    display: none;
+}
+
+.splash-screen > img {
+    width: 140px;
+    height: 140px;
+}
